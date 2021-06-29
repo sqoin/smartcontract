@@ -1,0 +1,374 @@
+{
+  "contractName": "bacem",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getBacem",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[],\"name\":\"getBacem\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/D/Jawaher/Med.tn/med-smartContract2/contracts/bacem.sol\":\"bacem\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/Jawaher/Med.tn/med-smartContract2/contracts/bacem.sol\":{\"keccak256\":\"0x5500205241045bd03f1773c3403326e7a13013b1eac77045f02ee4e699e87ed2\",\"urls\":[\"bzz-raw://e1fbe547c265830ef4ef04d0121586a6b607c6018191b880c59417d931ff0483\",\"dweb:/ipfs/QmYzRMTPCYvjBKYBGeSmtJaHA22RGCDmcSMX2UCX9Y6bC6\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060ff8061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063daaf6e9d14602d575b600080fd5b603360a5565b6040805160208082528351818301528351919283929083019185019080838360005b83811015606b5781810151838201526020016055565b50505050905090810190601f16801560975780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60408051808201909152600b81526a204920616d20426163656d60a81b60208201529056fea265627a7a723158200f448f6d64adbd47f249a42cb463c00e125f546514607251325f6400f198a2bf64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063daaf6e9d14602d575b600080fd5b603360a5565b6040805160208082528351818301528351919283929083019185019080838360005b83811015606b5781810151838201526020016055565b50505050905090810190601f16801560975780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60408051808201909152600b81526a204920616d20426163656d60a81b60208201529056fea265627a7a723158200f448f6d64adbd47f249a42cb463c00e125f546514607251325f6400f198a2bf64736f6c63430005100032",
+  "sourceMap": "34:144:4:-;;;53:26;8:9:-1;5:2;;;30:1;27;20:12;5:2;53:26:4;34:144;;;;;;",
+  "deployedSourceMap": "34:144:4:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;34:144:4;;;;;;;;;;;;;;;;;;;86:87;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;86:87:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;148:20;;;;;;;;;;;;-1:-1:-1;;;148:20:4;;;;86:87;:::o",
+  "source": "pragma solidity >=0.4.22 <0.9.0;\n\ncontract bacem {\n  constructor() public {\n  }\n\n\n\n   function getBacem() public pure returns (string memory) {\n    return \" I am Bacem\";\n  }\n  \n}\n                                                                ",
+  "sourcePath": "D:\\Jawaher\\Med.tn\\med-smartContract2\\contracts\\bacem.sol",
+  "ast": {
+    "absolutePath": "/D/Jawaher/Med.tn/med-smartContract2/contracts/bacem.sol",
+    "exportedSymbols": {
+      "bacem": [
+        345
+      ]
+    },
+    "id": 346,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 332,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:4"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 345,
+        "linearizedBaseContracts": [
+          345
+        ],
+        "name": "bacem",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 335,
+              "nodeType": "Block",
+              "src": "74:5:4",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 336,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 333,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "64:2:4"
+            },
+            "returnParameters": {
+              "id": 334,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "74:0:4"
+            },
+            "scope": 345,
+            "src": "53:26:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 343,
+              "nodeType": "Block",
+              "src": "142:31:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "204920616d20426163656d",
+                    "id": 341,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "155:13:4",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_e30d5a8d93eb05557944cbc04d67414001d5e145c4e80614f6137362e8e3f56c",
+                      "typeString": "literal_string \" I am Bacem\""
+                    },
+                    "value": " I am Bacem"
+                  },
+                  "functionReturnParameters": 340,
+                  "id": 342,
+                  "nodeType": "Return",
+                  "src": "148:20:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 344,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getBacem",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 337,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "103:2:4"
+            },
+            "returnParameters": {
+              "id": 340,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 339,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 344,
+                  "src": "127:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 338,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "127:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "126:15:4"
+            },
+            "scope": 345,
+            "src": "86:87:4",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 346,
+        "src": "34:144:4"
+      }
+    ],
+    "src": "0:243:4"
+  },
+  "legacyAST": {
+    "absolutePath": "/D/Jawaher/Med.tn/med-smartContract2/contracts/bacem.sol",
+    "exportedSymbols": {
+      "bacem": [
+        345
+      ]
+    },
+    "id": 346,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 332,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:4"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 345,
+        "linearizedBaseContracts": [
+          345
+        ],
+        "name": "bacem",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 335,
+              "nodeType": "Block",
+              "src": "74:5:4",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 336,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 333,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "64:2:4"
+            },
+            "returnParameters": {
+              "id": 334,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "74:0:4"
+            },
+            "scope": 345,
+            "src": "53:26:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 343,
+              "nodeType": "Block",
+              "src": "142:31:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "204920616d20426163656d",
+                    "id": 341,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "155:13:4",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_e30d5a8d93eb05557944cbc04d67414001d5e145c4e80614f6137362e8e3f56c",
+                      "typeString": "literal_string \" I am Bacem\""
+                    },
+                    "value": " I am Bacem"
+                  },
+                  "functionReturnParameters": 340,
+                  "id": 342,
+                  "nodeType": "Return",
+                  "src": "148:20:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 344,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getBacem",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 337,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "103:2:4"
+            },
+            "returnParameters": {
+              "id": 340,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 339,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 344,
+                  "src": "127:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 338,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "127:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "126:15:4"
+            },
+            "scope": 345,
+            "src": "86:87:4",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 346,
+        "src": "34:144:4"
+      }
+    ],
+    "src": "0:243:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "42": {
+      "events": {},
+      "links": {},
+      "address": "0x12f520B2bF668D4839aB9847aaEB8440368e4F59",
+      "transactionHash": "0x771f9a6a1377280ae439a19b5b39ebd2ffb62aace5e30ab26ac9c517ab184163"
+    }
+  },
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2021-04-16T21:08:51.088Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

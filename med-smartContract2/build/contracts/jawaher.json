@@ -1,0 +1,366 @@
+{
+  "contractName": "jawaher",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getJawaher",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[],\"name\":\"getJawaher\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/D/Jawaher/Med.tn/med-smartContract2/contracts/jawaher.sol\":\"jawaher\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/Jawaher/Med.tn/med-smartContract2/contracts/jawaher.sol\":{\"keccak256\":\"0x65e20e10ab7e114b5404ee4b4462c6f18423ba11f3d287d042dcdecb95430221\",\"urls\":[\"bzz-raw://fbcf887a671cce7845b3d52892b1dea80cb3530d9cd4b9d978abcc03971a6372\",\"dweb:/ipfs/QmeL5Pk8z4woEfZy7tiU3QTn8geQ7esbjjtFAVef3ZhSBW\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610101806100206000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063633c9fc414602d575b600080fd5b603360a5565b6040805160208082528351818301528351919283929083019185019080838360005b83811015606b5781810151838201526020016055565b50505050905090810190601f16801560975780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60408051808201909152600d81526c10249030b6902530bbb0b432b960991b60208201529056fea265627a7a723158203591c35788912a140ae8207b4717d1d1e6ab3f3d555b222b6d4ad9433d8e415b64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063633c9fc414602d575b600080fd5b603360a5565b6040805160208082528351818301528351919283929083019185019080838360005b83811015606b5781810151838201526020016055565b50505050905090810190601f16801560975780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60408051808201909152600d81526c10249030b6902530bbb0b432b960991b60208201529056fea265627a7a723158203591c35788912a140ae8207b4717d1d1e6ab3f3d555b222b6d4ad9433d8e415b64736f6c63430005100032",
+  "sourceMap": "37:160:5:-;;;59:27;8:9:-1;5:2;;;30:1;27;20:12;5:2;59:27:5;37:160;;;;;;",
+  "deployedSourceMap": "37:160:5:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;37:160:5;;;;;;;;;;;;;;;;;;;97:93;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;97:93:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;162:22;;;;;;;;;;;;-1:-1:-1;;;162:22:5;;;;97:93;:::o",
+  "source": "pragma solidity >= 0.5.0 < 0.7.0;\r\n\r\ncontract jawaher {\r\n  constructor() public {\r\n  }\r\n\r\n\r\n\r\n   function getJawaher() public pure returns (string memory) {\r\n    return \" I am Jawaher\";\r\n  }\r\n  \r\n}",
+  "sourcePath": "D:\\Jawaher\\Med.tn\\med-smartContract2\\contracts\\jawaher.sol",
+  "ast": {
+    "absolutePath": "/D/Jawaher/Med.tn/med-smartContract2/contracts/jawaher.sol",
+    "exportedSymbols": {
+      "jawaher": [
+        360
+      ]
+    },
+    "id": 361,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 347,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:33:5"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 360,
+        "linearizedBaseContracts": [
+          360
+        ],
+        "name": "jawaher",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 350,
+              "nodeType": "Block",
+              "src": "80:6:5",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 351,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 348,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "70:2:5"
+            },
+            "returnParameters": {
+              "id": 349,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "80:0:5"
+            },
+            "scope": 360,
+            "src": "59:27:5",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 358,
+              "nodeType": "Block",
+              "src": "155:35:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "204920616d204a617761686572",
+                    "id": 356,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "169:15:5",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_6565bd3e9f142f14dfcd262aa4057c9a312634c8b66afa397b459f2d140083d0",
+                      "typeString": "literal_string \" I am Jawaher\""
+                    },
+                    "value": " I am Jawaher"
+                  },
+                  "functionReturnParameters": 355,
+                  "id": 357,
+                  "nodeType": "Return",
+                  "src": "162:22:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 359,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getJawaher",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 352,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "116:2:5"
+            },
+            "returnParameters": {
+              "id": 355,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 354,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 359,
+                  "src": "140:13:5",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 353,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "140:6:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "139:15:5"
+            },
+            "scope": 360,
+            "src": "97:93:5",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 361,
+        "src": "37:160:5"
+      }
+    ],
+    "src": "0:197:5"
+  },
+  "legacyAST": {
+    "absolutePath": "/D/Jawaher/Med.tn/med-smartContract2/contracts/jawaher.sol",
+    "exportedSymbols": {
+      "jawaher": [
+        360
+      ]
+    },
+    "id": 361,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 347,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:33:5"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 360,
+        "linearizedBaseContracts": [
+          360
+        ],
+        "name": "jawaher",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 350,
+              "nodeType": "Block",
+              "src": "80:6:5",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 351,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 348,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "70:2:5"
+            },
+            "returnParameters": {
+              "id": 349,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "80:0:5"
+            },
+            "scope": 360,
+            "src": "59:27:5",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 358,
+              "nodeType": "Block",
+              "src": "155:35:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "204920616d204a617761686572",
+                    "id": 356,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "169:15:5",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_6565bd3e9f142f14dfcd262aa4057c9a312634c8b66afa397b459f2d140083d0",
+                      "typeString": "literal_string \" I am Jawaher\""
+                    },
+                    "value": " I am Jawaher"
+                  },
+                  "functionReturnParameters": 355,
+                  "id": 357,
+                  "nodeType": "Return",
+                  "src": "162:22:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 359,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getJawaher",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 352,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "116:2:5"
+            },
+            "returnParameters": {
+              "id": 355,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 354,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 359,
+                  "src": "140:13:5",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 353,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "140:6:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "139:15:5"
+            },
+            "scope": 360,
+            "src": "97:93:5",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 361,
+        "src": "37:160:5"
+      }
+    ],
+    "src": "0:197:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2021-04-16T21:08:18.673Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
