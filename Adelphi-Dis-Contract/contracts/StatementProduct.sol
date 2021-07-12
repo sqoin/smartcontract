@@ -41,6 +41,11 @@ contract StatementProduct {
 
   function updateStatementProduct(string memory a , string memory id) public onlyAdminOrUser {
     //  statementProducts[id] = a ;
+        string memory isFound = getStatementProduct(id);
+    if (bytes(isFound).length < 1)
+    {
+      addStatementProduct(a, id);
+    }
     emit statementProductUpdated(id , a);
   }
 
