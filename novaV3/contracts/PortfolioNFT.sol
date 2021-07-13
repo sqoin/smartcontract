@@ -1,8 +1,8 @@
-pragma solidity ^0.8.6;
+pragma solidity ^0.6.8;
 pragma experimental ABIEncoderV2;
 
 import { ERC721 } from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import { SafeMath } from "@openzeppelin/contracts/utils/math/SafeMath.sol";
+import { SafeMath } from "@openzeppelin/contracts/math/SafeMath.sol";
 
 
 /**
@@ -18,7 +18,7 @@ contract PortfolioNFT is ERC721 {
         string memory _Name, 
         string memory _Symbol
 
-    )  
+    )  public
         ERC721(_Name, _Symbol) 
     {
         mint(owner);

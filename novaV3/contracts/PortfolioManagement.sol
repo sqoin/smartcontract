@@ -14,7 +14,7 @@ contract PortfolioManagement is PortfolioDataStorages  {
     address[] public portfolioAddresses;
     PortfolioData portfolioData ;
 
-   event PortfolioNFTNFTCreated(address , PortfolioNFT , string , string , string  );
+   event PortfolioNFTCreated(address , PortfolioNFT , string , string , string  );
 
     constructor(PortfolioData _portfolioData) public {
         portfolioData = _portfolioData;
@@ -33,11 +33,15 @@ contract PortfolioManagement is PortfolioDataStorages  {
         PortfolioNFT portfolioNFT = new PortfolioNFT(owner, _portfolio.nameNFT, _portfolio.symbolNFT);
         portfolioAddresses.push(address(portfolioNFT));
         /// Save metadata of a photoNFT created
-        portfolioData.saveMetadataOfPortfolioNFT(portfolioNFT,  owner , _portfolio );
+        portfolioData.saveMetadataOfPortfolioNFT(portfolioNFT,  owner , _portfolio.nameNFT, _portfolio.symbolNFT , _portfolio.description);
    
 
-        emit PortfolioNFTNFTCreated(msg.sender, portfolioNFT, _portfolio.nameNFT, _portfolio.symbolNFT,  _portfolio.description);
+        emit PortfolioNFTCreated(msg.sender, portfolioNFT, _portfolio.nameNFT, _portfolio.symbolNFT,  _portfolio.description);
     }
+
+
+
+
 
 
   
