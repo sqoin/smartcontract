@@ -24,13 +24,16 @@ contract PortfolioData is PortfolioDataStorages {
      */
     function saveMetadataOfPortfolioNFT(
 
-        PortfolioNFT _portfolioNFT, 
+        address _portfolioNFT, 
         address _ownerAddress,
         string memory _Name, 
         string memory _Symbol, 
         string memory _description
     ) public returns (bool) {
         /// Save metadata of a Portfolio 
+ 
+
+
         Portfolio memory portfolio = Portfolio({
         portfolioNFT: _portfolioNFT,
         owner :_ownerAddress, 
@@ -41,6 +44,7 @@ contract PortfolioData is PortfolioDataStorages {
         portfolios.push(portfolio);
 
         /// Update PortfolioAddresses
+          portfolioAddresses.push(_portfolioNFT);
    
     }
 
@@ -70,7 +74,7 @@ contract PortfolioData is PortfolioDataStorages {
         return portfolioIndex;   
     }
 
-    function getPortfolioAddress(address portfolio) public view returns (Portfolio memory _portfolio) {
+    function getPortfolioByAddress(address portfolio) public view returns (Portfolio memory _portfolio) {
         //address PORTFOLIO = address(portfolio);
 
         /// Identify member's index

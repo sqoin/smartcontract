@@ -5,7 +5,7 @@ import { PortfolioNFT } from "../PortfolioNFT.sol";
 contract PortfolioDataObjects {
 
     struct Portfolio {  
-        PortfolioNFT portfolioNFT;
+        address portfolioNFT;
         address owner;   
         string  nameNFT; 
         string  symbolNFT;

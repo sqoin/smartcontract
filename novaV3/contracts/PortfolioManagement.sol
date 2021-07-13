@@ -11,10 +11,10 @@ import { PortfolioData } from "./PortfolioData.sol";
  */
 contract PortfolioManagement is PortfolioDataStorages  {
 
-    address[] public portfolioAddresses;
+
     PortfolioData portfolioData ;
 
-   event PortfolioNFTCreated(address , PortfolioNFT , string , string , string  );
+   event PortfolioNFTCreated(address , address , string , string , string  );
 
     constructor(PortfolioData _portfolioData) public {
         portfolioData = _portfolioData;
@@ -26,17 +26,17 @@ contract PortfolioManagement is PortfolioDataStorages  {
     /**
      * @notice - Create a new portfolioNFT 
      */
-    function createNewPortfolioNFT( 
-        Portfolio memory _portfolio ) public returns (bool) {
+    function createNewPortfolioNFT( string memory nameNFT , string memory symbolNFT , string memory description
+        ) public returns (bool) {
         address owner = msg.sender;  
         /// [Note]: Initial owner of photoNFT is msg.sender
-        PortfolioNFT portfolioNFT = new PortfolioNFT(owner, _portfolio.nameNFT, _portfolio.symbolNFT);
-        portfolioAddresses.push(address(portfolioNFT));
+        PortfolioNFT portfolioNFT = new PortfolioNFT(owner, nameNFT, symbolNFT);
+      
         /// Save metadata of a photoNFT created
-        portfolioData.saveMetadataOfPortfolioNFT(portfolioNFT,  owner , _portfolio.nameNFT, _portfolio.symbolNFT , _portfolio.description);
+        portfolioData.saveMetadataOfPortfolioNFT(address(portfolioNFT),  owner , nameNFT, symbolNFT , description);
    
 
-        emit PortfolioNFTCreated(msg.sender, portfolioNFT, _portfolio.nameNFT, _portfolio.symbolNFT,  _portfolio.description);
+        emit PortfolioNFTCreated(msg.sender, address(portfolioNFT), nameNFT, symbolNFT,  description);
     }
 
 
