@@ -28,18 +28,21 @@ contract PortfolioData is PortfolioDataStorages {
         address _ownerAddress,
         string memory _Name, 
         string memory _Symbol, 
-        string memory _description
+        string memory _description,
+        string[] memory _assetsNames,
+        uint256[] memory _assetsValues
     ) public returns (bool) {
         /// Save metadata of a Portfolio 
  
-
 
         Portfolio memory portfolio = Portfolio({
         portfolioNFT: _portfolioNFT,
         owner :_ownerAddress, 
         nameNFT: _Name, 
         symbolNFT: _Symbol,
-        description: _description
+        description: _description,
+        assetsNames: _assetsNames,
+        assetsValues: _assetsValues
         });
         portfolios.push(portfolio);
 

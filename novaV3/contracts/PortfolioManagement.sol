@@ -14,7 +14,7 @@ contract PortfolioManagement is PortfolioDataStorages  {
 
     PortfolioData portfolioData ;
 
-   event PortfolioNFTCreated(address , address , string , string , string  );
+   event PortfolioNFTCreated(address , address , string , string , string , string[] , uint256[] );
 
     constructor(PortfolioData _portfolioData) public {
         portfolioData = _portfolioData;
@@ -26,25 +26,19 @@ contract PortfolioManagement is PortfolioDataStorages  {
     /**
      * @notice - Create a new portfolioNFT 
      */
-    function createNewPortfolioNFT( string memory nameNFT , string memory symbolNFT , string memory description
+    function createNewPortfolioNFT( string memory nameNFT , string memory symbolNFT , string memory description , string[] memory assetsNames,
+        uint256[] memory assetsValues
         ) public returns (bool) {
         address owner = msg.sender;  
         /// [Note]: Initial owner of photoNFT is msg.sender
-        PortfolioNFT portfolioNFT = new PortfolioNFT(owner, nameNFT, symbolNFT);
+        PortfolioNFT portfolioNFT = new PortfolioNFT(owner, nameNFT, symbolNFT );
       
         /// Save metadata of a photoNFT created
-        portfolioData.saveMetadataOfPortfolioNFT(address(portfolioNFT),  owner , nameNFT, symbolNFT , description);
+        portfolioData.saveMetadataOfPortfolioNFT(address(portfolioNFT),  owner , nameNFT, symbolNFT , description , assetsNames , assetsValues);
    
 
-        emit PortfolioNFTCreated(msg.sender, address(portfolioNFT), nameNFT, symbolNFT,  description);
+        emit PortfolioNFTCreated(msg.sender, address(portfolioNFT), nameNFT, symbolNFT,  description , assetsNames, assetsValues);
     }
-
-
-
-
-
-
-  
 
 
 }

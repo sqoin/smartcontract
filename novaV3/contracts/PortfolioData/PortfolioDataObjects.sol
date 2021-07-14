@@ -10,6 +10,8 @@ contract PortfolioDataObjects {
         string  nameNFT; 
         string  symbolNFT;
         string  description;
+        string[] assetsNames;
+        uint256[] assetsValues;
     }
 
 }

@@ -30,45 +30,45 @@ contract("PortfolioManagement" , function(accounts) {
 
          it("test add new portfolio" , async function() {
    
-             let res1 = await PortfolioManagementContract.createNewPortfolioNFT("jawaherkorbosli", "jk","description",  {from: accounts[0]})
+             let res1 = await PortfolioManagementContract.createNewPortfolioNFT("jawaherkorbosli", "jk","description",["jawaher","bacem"],[2,3],  {from: accounts[0]})
             
              let res = await PortfolioDataContract.getAllPortfolios( )
              console.log ("res : "+JSON.stringify(res));
-              //assert.equal("jawaherkorbosli", res.nameNFT);
-              assert.equal(res[0].nameNFT, "jawaherkorbosli");
+      
+              assert.equal(res[0].assetsNames[0], "jawaher");
         });
 
          it("test getPortfolio" , async function() {
            
-             let res1 = await PortfolioManagementContract.createNewPortfolioNFT("jawaherkorbosli", "jk","description",  {from: accounts[0]})
+             let res1 = await PortfolioManagementContract.createNewPortfolioNFT("jawaherkorbosli", "jk","description",["jawaher","bacem"],[2,3],  {from: accounts[0]})
             
              let res = await PortfolioDataContract.getPortfolio("0", {from: accounts[0]} )
              console.log ("res : "+JSON.stringify(res));
-              //assert.equal("jawaherkorbosli", res.nameNFT);
+
               assert.equal(res.nameNFT, "jawaherkorbosli");
         });
 
 
          it("test get Portfolio By Address" , async function() {
            
-             await PortfolioManagementContract.createNewPortfolioNFT("jawaherkorbosli", "jk","description",  {from: accounts[0]})
+             await PortfolioManagementContract.createNewPortfolioNFT("jawaherkorbosli", "jk","description",["jawaher","bacem"],[2,3],  {from: accounts[0]})
              let res2 = await PortfolioDataContract.getAllPortfolios( );
 
              let res3 = await PortfolioDataContract.getPortfolioByAddress(res2[0].portfolioNFT, {from: accounts[0]} )
              console.log ("res3 : "+JSON.stringify(res3));
-              //assert.equal("jawaherkorbosli", res.nameNFT);
+
               assert.equal(res3.nameNFT, "jawaherkorbosli");
         });
 
 
          it("test get Portfolio Index" , async function() {
            
-             await PortfolioManagementContract.createNewPortfolioNFT("jawaherkorbosli", "jk","description",  {from: accounts[0]})
+             await PortfolioManagementContract.createNewPortfolioNFT("jawaherkorbosli", "jk","description",["jawaher","bacem"],[2,3],  {from: accounts[0]})
              let res2 = await PortfolioDataContract.getAllPortfolios( );
 
              let res3 = await PortfolioDataContract.getPortfolioIndex(res2[0].portfolioNFT, {from: accounts[0]} )
              console.log ("res3 : "+JSON.stringify(res3));
-              //assert.equal("jawaherkorbosli", res.nameNFT);
+    
               assert.equal(res3, "0");
         });
 
