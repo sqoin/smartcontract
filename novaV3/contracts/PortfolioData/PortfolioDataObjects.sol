@@ -2,7 +2,9 @@ pragma solidity >=0.4.22 <0.9.0;
 import { PortfolioNFT } from "../PortfolioNFT.sol";
 
 
-contract PortfolioDataObjects {
+
+
+contract PortfolioDataObjects    {
 
     struct Portfolio {  
         address portfolioNFT;
@@ -10,8 +12,10 @@ contract PortfolioDataObjects {
         string  nameNFT; 
         string  symbolNFT;
         string  description;
-        string[] assetsNames;
+        address[] assetsNames;
         uint256[] assetsValues;
+        address[] strategy;
+        uint256[] yield;
     }
 
 }

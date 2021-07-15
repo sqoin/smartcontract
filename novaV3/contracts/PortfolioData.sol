@@ -5,10 +5,11 @@ import { PortfolioDataStorages } from "./PortfolioData/PortfolioDataStorages.sol
 import { PortfolioNFT } from "./PortfolioNFT.sol";
 
 
+
 /**
  * @notice - This is the storage contract for Portfolio's
  */
-contract PortfolioData is PortfolioDataStorages {
+contract PortfolioData {
 
     address[] public portfolioAddresses;
 
@@ -29,8 +30,10 @@ contract PortfolioData is PortfolioDataStorages {
         string memory _Name, 
         string memory _Symbol, 
         string memory _description,
-        string[] memory _assetsNames,
-        uint256[] memory _assetsValues
+        address[] memory _assetsNames,
+        uint256[] memory _assetsValues,
+        address[] memory _strategy,
+        uint256[] memory _yield
     ) public returns (bool) {
         /// Save metadata of a Portfolio 
  
@@ -42,7 +45,9 @@ contract PortfolioData is PortfolioDataStorages {
         symbolNFT: _Symbol,
         description: _description,
         assetsNames: _assetsNames,
-        assetsValues: _assetsValues
+        assetsValues: _assetsValues,
+        strategy : _strategy,
+        yield : _yield 
         });
         portfolios.push(portfolio);
 
