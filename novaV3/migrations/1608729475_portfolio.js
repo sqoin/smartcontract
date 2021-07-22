@@ -8,9 +8,9 @@ module.exports = async function(_deployer) {
    
   // await _deployer.deploy(PortfolioNFT);
    await _deployer.deploy(PortfolioDataObjects);
-   await _deployer.deploy(PortfolioDataStorages);
-   await _deployer.deploy(PortfolioData);
-   let portfolioData = await PortfolioData.deployed();
+   let PortfolioDataStoragesContract =  await _deployer.deploy(PortfolioDataStorages);
+   //await _deployer.deploy(PortfolioData);
+   let portfolioData = await _deployer.deploy(PortfolioData , PortfolioDataStoragesContract.address);
    await _deployer.deploy(PortfolioManagement, portfolioData.address);
  
   

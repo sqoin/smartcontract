@@ -1,7 +1,8 @@
 pragma solidity >=0.4.22 <0.9.0;
 pragma experimental ABIEncoderV2;
 
-import { PortfolioDataStorages } from "./PortfolioData/PortfolioDataStorages.sol";
+import { PortfolioDataStorages  } from "./PortfolioData/PortfolioDataStorages.sol";
+import { PortfolioDataObjects } from "./PortfolioData/PortfolioDataObjects.sol";
 import { PortfolioNFT } from "./PortfolioNFT.sol";
 
 
@@ -12,8 +13,11 @@ import { PortfolioNFT } from "./PortfolioNFT.sol";
 contract PortfolioData {
 
     address[] public portfolioAddresses;
+    PortfolioDataStorages PortfolioDataStoragesContract;
 
-    constructor() public {}
+    constructor( PortfolioDataStorages _PortfolioDataStoragesContract)  public {
+        PortfolioDataStoragesContract = _PortfolioDataStoragesContract ;
+    }
 
 
 
@@ -38,7 +42,7 @@ contract PortfolioData {
         /// Save metadata of a Portfolio 
  
 
-        Portfolio memory portfolio = Portfolio({
+        PortfolioDataObjects.PortfolioTemplate memory portfolioTemplate = PortfolioDataObjects.PortfolioTemplate({
         portfolioNFT: _portfolioNFT,
         owner :_ownerAddress, 
         nameNFT: _Name, 
@@ -49,7 +53,7 @@ contract PortfolioData {
         strategy : _strategy,
         yield : _yield 
         });
-        portfolios.push(portfolio);
+        PortfolioDataStoragesContract.add(portfolioTemplate);
 
         /// Update PortfolioAddresses
           portfolioAddresses.push(_portfolioNFT);
@@ -63,9 +67,9 @@ contract PortfolioData {
     ///-----------------
     /// Getter methods
     ///-----------------
-    function getPortfolio(uint index) public view returns (Portfolio memory _portfolio) {
-        Portfolio memory portfolio = portfolios[index];
-        return portfolio;
+    function getPortfolio(uint index) public view returns (PortfolioDataObjects.PortfolioTemplate memory _portfolio) {
+        PortfolioDataObjects.PortfolioTemplate memory portfolioTemp = PortfolioDataStoragesContract.getPortfolioIndex(index);
+        return portfolioTemp;
     }
 
     function getPortfolioIndex(address portfolio) public view returns (uint _portfolioIndex) {
@@ -82,7 +86,7 @@ contract PortfolioData {
         return portfolioIndex;   
     }
 
-    function getPortfolioByAddress(address portfolio) public view returns (Portfolio memory _portfolio) {
+    function getPortfolioByAddress(address portfolio) public view returns (PortfolioDataObjects.PortfolioTemplate memory _portfolio) {
         //address PORTFOLIO = address(portfolio);
 
         /// Identify member's index
@@ -93,12 +97,12 @@ contract PortfolioData {
             }
         }
 
-        Portfolio memory portfolioX = portfolios[portfolioIndex];
+        PortfolioDataObjects.PortfolioTemplate memory portfolioX = PortfolioDataStoragesContract.getPortfolioIndex(portfolioIndex);
         return portfolioX;
     }
 
-    function getAllPortfolios() public view returns (Portfolio[] memory _portfolios) {
-        return portfolios;
+    function getAllPortfolios() public view returns (PortfolioDataObjects.PortfolioTemplate[] memory _portfolios) {
+        return PortfolioDataStoragesContract.getAllPortfoliosTemplate() ;
     }
 
 }
