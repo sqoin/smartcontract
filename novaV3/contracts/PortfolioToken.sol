@@ -106,7 +106,7 @@ contract PortfolioToken is ERC20 , ERC20Burnable
         uint pourcentage ; 
 
         //loop to swap to each assets with her poucentage
-        for (uint i ; i < pourcentageAssets.length ; i++)
+        for (uint i=0 ; i < pourcentageAssets.length ; i++)
         {
             tokenToSwap = pourcentageAssets[i].assetAddress ;
             pourcentage = pourcentageAssets[i].assetValue ;
@@ -123,7 +123,7 @@ contract PortfolioToken is ERC20 , ERC20Burnable
             uint256 diffBalance = NewBalanceTokenToSwap - OldbalanceTokenToSwap ;
 
             // update the funds saved 
-            for (uint j ; j < listFunds[tokenDeposit].length ; j++){
+            for (uint j=0 ; j < listFunds[tokenDeposit].length ; j++){
                 // save the funds of tokenSwapped of sender after subtraction 
                 if(listFunds[tokenDeposit][j].user == msg.sender ){
                      uint256 oldBalanceSenderTokenDeposit =  listFunds[tokenDeposit][j].amount;
@@ -135,7 +135,7 @@ contract PortfolioToken is ERC20 , ERC20Burnable
 
                      // yield strategy : send the amount swapped from smart contract to address of the strategy
                       uint256 fundsRest = diffBalance ;
-                     for ( uint k ; k < yieldStrategies.length ; k++ )
+                     for ( uint k=0 ; k < yieldStrategies.length ; k++ )
                      {
                         uint256 yieldValue = diffBalance.mul(yieldStrategies[k].yield).div(100);
                         IERC20(tokenToSwap).transferFrom(address(this), yieldStrategies[k].strategyAddress ,yieldValue);
